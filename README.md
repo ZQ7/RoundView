@@ -15,7 +15,7 @@ repositories {
     
 ``` groovy
 dependencies {
-    compile 'compile 'com.yi2580.roundview:RoundView:1.0.1''
+    compile 'compile 'com.yi2580.roundview:RoundView:1.0.3''
 }
 ```
 **属性**
@@ -44,6 +44,8 @@ dependencies {
         <enum name="line" value="2"></enum>
         <enum name="ring" value="3"></enum>
     </attr>
+    <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+    <attr name="viewPressedRatio" format="float" />
     
     
 
@@ -75,7 +77,7 @@ dependencies {
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
         <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-        <attr name="viewPressedRatio" format="float" />
+        <attr name="viewPressedRatio" />
     </declare-styleable>
 	
 	
@@ -108,7 +110,7 @@ dependencies {
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
         <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-        <attr name="viewPressedRatio" format="float" />
+        <attr name="viewPressedRatio" />
     </declare-styleable>
 	
 	

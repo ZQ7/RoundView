@@ -26,6 +26,8 @@
         <enum name="line" value="2"></enum>
         <enum name="ring" value="3"></enum>
     </attr>
+    <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+    <attr name="viewPressedRatio" format="float" />
 
     <!--setSelected()，改变背景色、边框色、字体色、文字-->
     <declare-styleable name="RoundTextView">
@@ -51,7 +53,7 @@
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
         <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-        <attr name="viewPressedRatio" format="float" />
+        <attr name="viewPressedRatio" />
     </declare-styleable>
 
     <!--setEnabled()，改变背景色、边框色、字体色、文字-->
@@ -78,7 +80,7 @@
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
         <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-        <attr name="viewPressedRatio" format="float" />
+        <attr name="viewPressedRatio" />
     </declare-styleable>
 
     <!--背景、边框、圆角、圆形Layout-->
