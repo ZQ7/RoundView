@@ -28,8 +28,8 @@ public class EnabledTextView extends AppCompatTextView {
 
     //文字
     private String[] mStateText = new String[2];
-    private int textColor = Color.BLACK;
-    private int textEnabledColor = textColor;
+    private int textColor;
+    private int textEnabledColor;
 
     public EnabledTextView(Context context) {
         this(context, null);
@@ -94,7 +94,7 @@ public class EnabledTextView extends AppCompatTextView {
         }
         int solidEnabledColor = a.getColor(R.styleable.EnabledTextView_viewSolidEnabledColor, solidColor);
         //文字颜色
-        textColor = a.getColor(R.styleable.EnabledTextView_eTextColor, Color.BLACK);
+        textColor = a.getColor(R.styleable.EnabledTextView_eTextColor, getTextColors().getDefaultColor());
         textEnabledColor = a.getColor(R.styleable.EnabledTextView_eTextEnabledColor, textColor);
 
 
@@ -139,7 +139,7 @@ public class EnabledTextView extends AppCompatTextView {
      * 设置是否启用
      * 改变相应文字、边框和填充颜色
      *
-     * @param enabled
+     * @param enabled 是否启用
      */
     @Override
     public void setEnabled(boolean enabled) {

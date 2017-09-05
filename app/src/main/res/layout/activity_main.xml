@@ -71,7 +71,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:text="S"
-        app:rTextColor="@color/text_red_black"
+        android:textColor="@color/text_red_deep"
         app:viewShapeTpe="oval"
         app:viewStrokeColor="#FD6853"
         app:viewStrokeWidth="0.5dp" />

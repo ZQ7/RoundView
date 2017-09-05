@@ -28,8 +28,8 @@ public class RoundTextView extends AppCompatTextView {
 
     //文字
     private String[] mStateText = new String[2];
-    private int textColor = Color.BLACK;
-    private int textSelectedColor = textColor;
+    private int textColor;
+    private int textSelectedColor;
 
     public RoundTextView(Context context) {
         this(context, null);
@@ -94,7 +94,7 @@ public class RoundTextView extends AppCompatTextView {
         }
         int solidSelectedColor = a.getColor(R.styleable.RoundTextView_viewSolidSelectedColor, solidColor);
         //文字颜色
-        textColor = a.getColor(R.styleable.RoundTextView_rTextColor, Color.BLACK);
+        textColor = a.getColor(R.styleable.RoundTextView_rTextColor, getTextColors().getDefaultColor());
         textSelectedColor = a.getColor(R.styleable.RoundTextView_rTextSelectedColor, textColor);
 
 
@@ -137,7 +137,7 @@ public class RoundTextView extends AppCompatTextView {
      * 设置是否选中
      * 改变相应文字、边框和填充颜色
      *
-     * @param selected
+     * @param selected 是否选中
      */
     @Override
     public void setSelected(boolean selected) {

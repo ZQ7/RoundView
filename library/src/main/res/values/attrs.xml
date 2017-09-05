@@ -2,14 +2,10 @@
 
 <resources>
 
-
     <!-- 背景色 -->
     <attr name="viewSolidColor" format="color" />
-    <attr name="viewSolidSelectedColor" format="color" />
     <!-- 边框色 -->
     <attr name="viewStrokeColor" format="color" />
-    <attr name="viewStrokeSelectedColor" format="color" />
-
     <!-- 边框厚度 -->
     <attr name="viewStrokeWidth" format="dimension" />
     <!-- 边框虚线长度 -->
@@ -30,21 +26,20 @@
         <enum name="line" value="2"></enum>
         <enum name="ring" value="3"></enum>
     </attr>
-    <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-    <attr name="viewPressedRatio" format="float" />
 
-
+    <!--setSelected()，改变背景色、边框色、字体色、文字-->
     <declare-styleable name="RoundTextView">
         <!-- 文字颜色 -->
         <attr name="rTextColor" format="color" />
         <attr name="rTextSelectedColor" format="color" />
-        <attr name="rStateText" format="reference" /><!-- 选中和非选中的Text(覆盖android:text="")，如果一致课直接设置android:text="" -->
+        <!-- 选中和非选中的Text(覆盖android:text="")，如果一致课直接设置android:text="" -->
+        <attr name="rStateText" format="reference" />
         <!-- 背景色 -->
         <attr name="viewSolidColor" />
-        <attr name="viewSolidSelectedColor" />
+        <attr name="viewSolidSelectedColor" format="color" />
         <!-- 边框色 -->
         <attr name="viewStrokeColor" />
-        <attr name="viewStrokeSelectedColor" />
+        <attr name="viewStrokeSelectedColor" format="color" />
         <attr name="viewStrokeWidth" /><!-- 边框厚度 -->
         <attr name="viewStrokeDashWidth" /><!-- 边框虚线长度 -->
         <attr name="viewStrokeDashGap" /><!-- 边框虚线间隙 -->
@@ -55,21 +50,23 @@
         <attr name="viewTopRightRadius" />
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
-        <attr name="viewPressedRatio" /><!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-
+        <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+        <attr name="viewPressedRatio" format="float" />
     </declare-styleable>
 
+    <!--setEnabled()，改变背景色、边框色、字体色、文字-->
     <declare-styleable name="EnabledTextView">
         <!-- 文字颜色 -->
         <attr name="eTextColor" format="color" />
         <attr name="eTextEnabledColor" format="color" />
-        <attr name="eStateText" format="reference" /><!-- 可点击和不可点击的Text(覆盖android:text="")，如果一致课直接设置android:text="" -->
+        <!-- 可点击和不可点击的Text(覆盖android:text="")，如果一致课直接设置android:text="" -->
+        <attr name="eStateText" format="reference" />
         <!-- 背景色 -->
         <attr name="viewSolidColor" />
-        <attr name="viewSolidEnabledColor" format="color"/>
+        <attr name="viewSolidEnabledColor" format="color" />
         <!-- 边框色 -->
         <attr name="viewStrokeColor" />
-        <attr name="viewStrokeEnabledColor" format="color"/>
+        <attr name="viewStrokeEnabledColor" format="color" />
         <attr name="viewStrokeWidth" /><!-- 边框厚度 -->
         <attr name="viewStrokeDashWidth" /><!-- 边框虚线长度 -->
         <attr name="viewStrokeDashGap" /><!-- 边框虚线间隙 -->
@@ -80,10 +77,11 @@
         <attr name="viewTopRightRadius" />
         <attr name="viewBottomLeftRadius" />
         <attr name="viewBottomRightRadius" />
-        <attr name="viewPressedRatio" /><!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
-
+        <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+        <attr name="viewPressedRatio" format="float" />
     </declare-styleable>
 
+    <!--背景、边框、圆角、圆形Layout-->
     <declare-styleable name="RoundLatout">
         <attr name="viewSolidColor" /><!-- 背景色 -->
         <attr name="viewStrokeColor" /><!-- 边框色 -->
@@ -99,39 +97,5 @@
         <attr name="viewBottomRightRadius" />
     </declare-styleable>
 
-
-    <declare-styleable name="CustumBgTextView">
-        <!--填充色-->
-        <attr name="solidColor" format="color"></attr>
-        <!--边框色-->
-        <attr name="strokeColor" format="color"></attr>
-        <!--按下填充色-->
-        <attr name="solidTouchColor" format="color"></attr>
-        <!---按下边框色-->
-        <attr name="strokeTouchColor" format="color"></attr>
-        <!--文字按下颜色 -->
-        <attr name="textTouchColor" format="color"></attr>
-
-        <attr name="strokeWith" format="integer"></attr>
-        <attr name="radius" format="dimension"></attr>
-        <attr name="topLeftRadius" format="dimension"></attr>
-        <attr name="topRightRadius" format="dimension"></attr>
-        <attr name="bottomLeftRadius" format="dimension"></attr>
-        <attr name="bottomRightRadius" format="dimension"></attr>
-
-        <!--虚线的间隙-->
-        <attr name="dashGap" format="dimension"></attr>
-        <!--虚线的宽度-->
-        <attr name="dashWidth" format="dimension"></attr>
-
-
-        <attr name="shapeTpe" format="enum">
-            <enum name="rectangle" value="0"></enum>
-            <enum name="oval" value="1"></enum>
-            <enum name="line" value="2"></enum>
-            <enum name="ring" value="3"></enum>
-        </attr>
-
-    </declare-styleable>
 
 </resources>
