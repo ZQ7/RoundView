@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_focus_user">
+        <item>关注</item>
+        <item>已关注</item>
+    </string-array>
+</resources>

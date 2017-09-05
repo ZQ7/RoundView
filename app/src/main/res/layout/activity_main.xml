@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.yi2580.demo.com.yi2580.roundview.sample.MainActivity">
+
+    <com.yi2580.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:viewBottomLeftRadius="25dp"
+        app:viewStrokeColor="#FD6853"
+        app:viewStrokeWidth="0.5dp"
+        app:viewTopRightRadius="25dp">
+
+        <com.yi2580.roundview.RoundTextView
+            android:id="@+id/tv_main_1"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:text="Hello World"
+            app:rStateText="@array/my_focus_user"
+            app:rTextColor="#FD6853"
+            app:rTextSelectedColor="#BBBBBB"
+            app:viewCornerRadius="5dp"
+            app:viewStrokeColor="#FD6853"
+            app:viewStrokeSelectedColor="#BBBBBB"
+            app:viewStrokeWidth="0.5dp" />
+
+        <com.yi2580.roundview.RoundTextView
+            android:id="@+id/tv_main_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:text="Text"
+            app:rTextColor="@color/text_red_white"
+            app:viewShapeTpe="oval"
+            app:viewSolidColor="@color/text_red_shallow"
+            app:viewSolidSelectedColor="@color/text_red_deep" />
+
+        <com.yi2580.roundview.RoundTextView
+            android:id="@+id/tv_main_3"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:text="Hello World"
+            app:rStateText="@array/my_focus_user"
+            app:rTextColor="#FD6853"
+            app:rTextSelectedColor="#BBBBBB"
+            app:viewCornerRadius="5dp"
+            app:viewStrokeColor="#FD6853"
+            app:viewStrokeDashGap="2dp"
+            app:viewStrokeDashWidth="5dp"
+            app:viewStrokeSelectedColor="#BBBBBB"
+            app:viewStrokeWidth="0.5dp" />
+    </com.yi2580.roundview.RoundLinearLayout>
+
+
+    <com.yi2580.roundview.RoundTextView
+        android:id="@+id/tv_main_setting"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="S"
+        app:rTextColor="@color/text_red_black"
+        app:viewShapeTpe="oval"
+        app:viewStrokeColor="#FD6853"
+        app:viewStrokeWidth="0.5dp" />
+
+    <com.yi2580.roundview.EnabledTextView
+        android:id="@+id/tv_main_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:enabled="false"
+        android:text="登录"
+        app:eTextColor="@color/text_red_white"
+        app:viewCornerRadius="5dp"
+        app:viewSolidColor="@color/text_red_shallow"
+        app:viewSolidEnabledColor="@color/text_red_deep" />
+
+
+    <com.yi2580.roundview.RoundRelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        app:viewShapeTpe="oval"
+        app:viewStrokeColor="#FD6853"
+        app:viewStrokeDashGap="2dp"
+        app:viewStrokeDashWidth="5dp"
+        app:viewStrokeWidth="0.5dp"></com.yi2580.roundview.RoundRelativeLayout>
+
+</LinearLayout>
