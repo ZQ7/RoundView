@@ -189,11 +189,15 @@ public class RoundTextView extends AppCompatTextView {
      * @return
      */
     private ColorStateList getSolidColorStateList(int normal, int selected, float ratio) {
-
-        int pressed = darker(normal, ratio);
-        int selectedPressed = darker(selected, ratio);
-        int[][] states = new int[][]{{android.R.attr.state_pressed}, {android.R.attr.state_selected}, {android.R.attr.state_pressed, android.R.attr.state_selected}, {}};
-        int[] colors = new int[]{pressed, selected, selectedPressed, normal};
+        int pressed = normal;
+        int selectedPressed = selected;
+        if (ratio != 0) {
+            pressed = darker(normal, ratio);
+            selectedPressed = darker(selected, ratio);
+        }
+        //状态多的放前面
+        int[][] states = new int[][]{{android.R.attr.state_pressed, android.R.attr.state_selected}, {android.R.attr.state_selected}, {android.R.attr.state_pressed}, {}};
+        int[] colors = new int[]{selectedPressed, selected, pressed, normal};
         return new ColorStateList(states, colors);
     }
 

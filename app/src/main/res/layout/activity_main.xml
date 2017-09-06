@@ -41,6 +41,7 @@
             android:layout_margin="10dp"
             android:text="Text"
             app:rTextColor="@color/text_red_white"
+            app:viewPressedRatio="0"
             app:viewShapeTpe="oval"
             app:viewSolidColor="@color/text_red_shallow"
             app:viewSolidSelectedColor="@color/text_red_deep" />

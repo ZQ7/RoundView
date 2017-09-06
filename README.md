@@ -15,7 +15,7 @@ repositories {
     
 ``` groovy
 dependencies {
-    compile 'compile 'com.yi2580.roundview:RoundView:1.0.3''
+    compile 'compile 'com.yi2580.roundview:RoundView:1.1.1''
 }
 ```
 **属性**

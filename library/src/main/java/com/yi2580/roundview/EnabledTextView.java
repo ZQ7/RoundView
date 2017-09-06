@@ -192,11 +192,15 @@ public class EnabledTextView extends AppCompatTextView {
      * @return
      */
     private ColorStateList getSolidColorStateList(int normal, int enabled, float ratio) {
-
-        int pressed = darker(normal, ratio);
-        int enabledPressed = darker(enabled, ratio);
-        int[][] states = new int[][]{{android.R.attr.state_pressed}, {android.R.attr.state_enabled}, {android.R.attr.state_pressed, android.R.attr.state_enabled}, {}};
-        int[] colors = new int[]{pressed, enabled, enabledPressed, normal};
+        int pressed = normal;
+        int enabledPressed = enabled;
+        if (ratio != 0) {
+            pressed = darker(normal, ratio);
+            enabledPressed = darker(enabled, ratio);
+        }
+        //状态多的放前面
+        int[][] states = new int[][]{{android.R.attr.state_pressed, android.R.attr.state_selected}, {android.R.attr.state_selected}, {android.R.attr.state_pressed}, {}};
+        int[] colors = new int[]{enabledPressed, enabled, pressed, normal};
         return new ColorStateList(states, colors);
     }
 
